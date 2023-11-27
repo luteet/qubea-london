@@ -1,0 +1,269 @@
+@use 'sass:math';
+
+:root {
+	--title-font: 'Manrope', sans-serif;
+	--main-font: 'Manrope', sans-serif;
+	--decor-font: 'Thesignature';
+	
+	--accent: #00205F;
+	--accent-hover: #1C3D7F;
+	--accent-active: #000613;
+	--primary-1: #A48B78;
+	--primary-2: #625348;
+	--primary-3: #211C17;
+
+	--light: #FDFCFA;
+	--light-2: #E7E1D8;
+	--light-3: #F2EDE7;
+
+	--white: #FFF;
+	--black: #000;
+
+	--container-padding: 20px;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1; visibility: visible;
+	}
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0; visibility: hidden;
+	}
+}
+
+html {
+	font-size: 16px;
+	min-height: 100%;
+	//height: calc(var(--vh,1vh) * 100);
+	//overflow: hidden;
+	min-width: 320px;
+	background: var(--light);
+}
+
+body {
+
+	font-size: 16px;
+
+	min-height: 100%;
+	min-width: 320px;
+
+	background: var(--light);
+
+	font-family: var(--main-font);
+	font-weight: 400;
+	line-height: 150%;
+	
+	@media (min-width: 480px) {
+		--container-padding: 40px;
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	/* height: calc(var(--vh,1vh) * 100);
+	overflow: hidden; */
+
+	&.is-mobile-menu-active {
+		overflow: hidden;
+		//height: 100vh;
+	}
+	
+}
+
+.image-aspect-ratio {
+	width: 100%; position: relative;
+	padding-top: var(--padding-aspect-ratio);
+}
+
+.image-aspect-ratio img {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+	object-fit: cover;
+}
+
+section {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper {
+	flex: 1 1 auto;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+}
+
+.container {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@media (min-width: #{$containerMin}px) {
+		
+		padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+
+		&.is-large {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		}
+	}
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	
+	padding: 8px 12px;
+	
+	font-weight: 500;
+	line-height: 160%;
+	color: var(--white);
+	font-size: 1rem;
+
+	@include _container {
+		font-size: 1.25rem;
+	}
+
+	&.is-light {
+		background: var(--light-3);
+		border-color: var(--light);
+		color: var(--primary-2);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--white);
+			}
+			
+			&:active {
+				background: var(--white);
+			}
+		}
+	}
+
+	&.is-light-2 {
+		background: var(--white);
+		color: var(--primary-2);
+		border-color: var(--white);
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--light);
+			}
+			
+			&:active {
+				background: var(--light-2);
+			}
+		}
+	}
+
+	&.is-hidden-text-on-mob {
+		padding: 0;
+		border: 0;
+		
+		@include _992 {
+			padding: 8px 12px;
+			border: 1px solid var(--accent-hover);
+		}
+	}
+
+	&.is-hidden-text-on-mob svg:first-child {
+		margin-right: 0;
+		@include _992 {
+			margin-right: 8px;
+		}
+	}
+
+	&.is-hidden-text-on-mob span {
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	border-radius: 8px;
+	border: 1px solid var(--accent-hover);
+	background: var(--accent-hover);
+	
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--white);
+			background: var(--accent);
+			border-color: var(--accent);
+		}
+		
+		&:active {
+			color: var(--white);
+			background: var(--accent-active);
+			border-color: var(--accent-active);
+		}
+	}
+
+	svg:first-child {
+		flex: 0 0 32px; margin-right: 8px;
+	}
+	
+	&.is-transparent {
+		color: var(--accent-hover);
+		background: transparent;
+	}
+
+	transition: background .3s ease, color .2s ease, border-color .3s ease;
+	@media (any-hover: hover) {
+		&.is-transparent {
+			&:hover {
+				color: var(--white);
+				background: var(--accent);
+				border-color: var(--accent);
+			}
+			
+			&:active {
+				color: var(--white);
+				background: var(--accent-active);
+				border-color: var(--accent-active);
+			}
+		}
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px; height: 1px;
+	margin: -1px; padding: 0;
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.visible-on-mob {
+	@include _992 {
+		display: none !important;
+	}
+}
+
+.visible-on-desktop {
+	@media (max-width: 991px) {
+		display: none !important;
+	}
+}
+
+.splide__arrow:focus-visible {
+	outline: none;
+}
+
+[aria-hidden="true"] {
+	pointer-events: none; user-select: none;
+}

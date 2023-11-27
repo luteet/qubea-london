@@ -1,0 +1,176 @@
+.services {
+
+	padding-top: 56px;
+	
+	@include _768 {
+		padding-top: 90px;
+	}
+	
+	@include _992 {
+		padding-top: 120px;
+	}
+
+	// .services__slider
+
+	&__slider {
+	}
+
+	// .services__header
+
+	&__header {
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		// .services__header--col
+
+		&--col {
+		}
+	}
+
+	// .services__section-name
+
+	&__section-name {
+	}
+
+	// .services__title
+
+	&__title {
+	}
+
+	// .services__controls
+
+	&__controls {
+		display: flex;
+		align-items: center;
+
+		gap: 32px;
+	}
+
+	// .services__arrow
+
+	&__arrow {
+		position: static;
+		transform: none;
+
+		width: 50px; height: 32px;
+		background: transparent;
+
+		color: var(--accent);
+		opacity: 1;
+
+		svg {
+			width: 100%; height: auto;
+		}
+	}
+
+	// .services__track
+
+	&__track {
+		margin-top: 32px;
+
+		@include _426 {
+			margin-top: 48px;
+		}
+		
+		@include _992 {
+			margin-top: 72px;
+		}
+
+		&.splide__track {
+			overflow: visible;
+		}
+	}
+
+	// .services__list
+
+	&__list {
+	}
+
+	// .services__card
+
+	&__card {
+
+		border: 1px solid var(--accent);
+		border-radius: 8px;
+
+		&--body {
+			display: grid;
+			> * {
+				grid-area: 1/1;
+			}
+		}
+
+		// .services__card--background
+
+		&--background {
+			img {
+				border-radius: 8px;
+			}
+		}
+
+		// .services__card--content
+
+		&--content {
+			align-self: self-end;
+			z-index: 2;
+		}
+
+		// .services__card--name
+
+		&--name {
+			display: inline-block;
+
+			color: var(--accent);
+			font-weight: 700;
+			line-height: 100%;
+			font-size: 2rem;
+
+			@media (min-width: #{$containerMin}px) {
+				font-size: 2.5rem;
+			}
+
+			padding: 24px 24px 12px;
+			background: var(--white);
+		}
+
+		// .services__card--link
+
+		&--link {
+			padding: 20px 24px;
+
+			display: flex;
+			align-items: center;
+			background: var(--white);
+
+			border-radius: 0 0 8px 8px;
+
+			color: var(--accent-hover);
+			font-weight: 500;
+			line-height: 120%;
+			font-size: 1.25rem;
+
+			@media (min-width: #{$containerMin}px) {
+				font-size: 1.5rem;
+			}
+
+			gap: 10px;
+
+			svg {
+				flex: 0 0 32px;
+			}
+		}
+	}
+
+	// .services__footer
+
+	&__footer {
+		margin-top: 32px;
+
+		display: flex;
+		align-items: center;
+
+		gap: 32px;
+	}
+}

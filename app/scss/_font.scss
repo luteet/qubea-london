@@ -1,0 +1,148 @@
+
+@font-face {
+	@include font-include('Manrope', 400, swap, normal, 'Manrope-Regular');
+}
+
+@font-face {
+	@include font-include('Manrope', 500, swap, normal, 'Manrope-Medium');
+}
+
+@font-face {
+	@include font-include('Manrope', 600, swap, normal, 'Manrope-Semibold');
+}
+
+@font-face {
+	@include font-include('Manrope', 700, swap, normal, 'Manrope-Bold');
+}
+
+@font-face {
+	
+	font-weight: 400;
+	font-family: "Thesignature";
+	font-display: swap;
+	font-style: italic;
+
+	src: url('Thesignature.otf') format('opentype');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 600;
+	line-height: 115%;
+
+	mark {
+		background: transparent;
+		font-family: var(--decor-font);
+		font-style: italic;
+		line-height: 55%;
+		font-weight: 300;
+
+		font-size: 5rem; // 80px
+		@media (min-width: 480px) {
+			font-size: 7rem; // 112px
+		}
+	}
+
+	font-size: 2rem; // 48px
+	@media (min-width: 480px) {
+		font-size: 3rem; // 48px
+	}
+
+	@include _550 {
+		font-size: 4rem; // 64px
+
+		mark {
+			font-size: 9rem; // 144px
+		}
+	}
+
+	@include _768 {
+		font-size: 4.5rem; // 72px
+
+		mark {
+			font-size: 12.5rem; // 200px
+		}
+	}
+
+	@include _992 {
+		font-size: 4.5rem; // 72px
+
+		mark {
+			font-size: 12rem; // 192px	
+		}
+	}
+
+	@include _container {
+		font-size: 5.875rem; // 94px
+
+		mark {
+			font-size: 14.625rem; // 234px	
+		}
+	}
+}
+
+.section-name {
+	color: var(--primary-1);
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 0.09rem;
+	text-transform: uppercase;
+
+	font-size: 0.875rem;
+
+	@include _426 {
+		font-size: 1rem;
+	}
+
+	@include _768 {
+		font-size: 1.125rem;
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1rem;
+
+	@include _426 {
+		font-size: 1.125rem;
+	}
+
+	@include _768 {
+		font-size: 1.5rem;
+	}
+
+	@include _992 {
+		font-size: 1.875rem;
+	}
+
+}
+
+.section-title {
+
+	color: var(--accent);
+	font-size: 2.25rem; // 36px
+	font-weight: 600;
+	line-height: 100%;
+
+	padding-top: 2px;
+
+	@include _426 {
+		font-size: 3rem; // 48px
+	}
+
+	@include _550 {
+		font-size: 3.5rem; // 56px
+	}
+	
+	@include _992 {
+		font-size: 4rem;
+	}
+
+}
+
+.txt-center {
+	text-align: center;
+}
