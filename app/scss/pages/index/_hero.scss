@@ -13,7 +13,7 @@
 		min-height: calc(var(--svh,1vh) * 100 - var(--height-header));
 		min-height: calc(100svh - var(--height-header));
 		@include _992 {
-			min-height: max(calc(100vh - var(--height-header)) + 2px, 732px);
+			min-height: max(calc(100vh - var(--height-header)) + 1px, 732px);
 		}
 
 		background: var(--primary-1);
@@ -30,7 +30,7 @@
 		min-height: calc(var(--svh,1vh) * 100 - var(--height-header));
 		min-height: calc(100svh - var(--height-header));
 		@include _992 {
-			min-height: max(calc(100vh - var(--height-header)) + 2px, 732px);
+			min-height: max(calc(100vh - var(--height-header)) + 1px, 732px);
 			
 		}
 	}

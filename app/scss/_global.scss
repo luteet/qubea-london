@@ -34,6 +34,18 @@
 	}
 }
 
+/* #__bs_script__, #__bs_script__ + script {
+	position: absolute;
+	width: 1px; height: 1px;
+	margin: -1px; padding: 0;
+	border: 0;
+	
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+} */
+
 html {
 	font-size: 16px;
 	min-height: 100%;
@@ -195,7 +207,7 @@ section {
 	border-radius: 8px;
 	border: 1px solid var(--accent-hover);
 	background: var(--accent-hover);
-	
+
 	@media (any-hover: hover) {
 		&:hover {
 			color: var(--white);

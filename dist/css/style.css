@@ -2388,7 +2388,7 @@ input:focus::placeholder,textarea:focus::placeholder {
     }
 
     .hero__slider,.hero__slider-background {
-        min-height: max(100vh - var(--height-header) + 2px,732px)
+        min-height: max(100vh - var(--height-header) + 1px,732px)
     }
 
     .hero__slide {
