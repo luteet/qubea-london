@@ -82,6 +82,11 @@ body {
 		overflow: hidden;
 		//height: 100vh;
 	}
+
+	::selection {
+		color: var(--light);
+		background: var(--accent-hover);
+	}
 	
 }
 
@@ -139,15 +144,37 @@ section {
 	justify-content: center;
 	text-align: center;
 	
-	padding: 8px 12px;
+	padding: 12px 20.5px;
 	
 	font-weight: 500;
 	line-height: 160%;
 	color: var(--white);
-	font-size: 1rem;
+	font-size: 1.25rem;
+	@include _426 {
+		font-size: 1.5rem;
+	}
 
-	@include _container {
+	&.is-min {
+		padding: 8px 12px;
+		font-size: 1rem;
+		@include _container {
+			font-size: 1.25rem;
+			padding: 8px 9px;
+		}
+	}
+
+	&.is-min-2 {
 		font-size: 1.25rem;
+
+		@include _426 {
+			font-size: 1.25rem;
+			padding: 7px 20.5px;
+		}
+
+		@include _992 {
+			font-size: 1.25rem;
+			padding: 7px 9px;
+		}
 	}
 
 	&.is-light {
@@ -157,11 +184,15 @@ section {
 
 		@media (any-hover: hover) {
 			&:hover {
+				color: var(--primary-2);
 				background: var(--white);
+				border-color: var(--white);
 			}
 			
 			&:active {
+				color: var(--primary-2);
 				background: var(--white);
+				border-color: var(--white);
 			}
 		}
 	}
@@ -173,10 +204,14 @@ section {
 		@media (any-hover: hover) {
 			&:hover {
 				background: var(--light);
+				color: var(--primary-2);
+				border-color: var(--light);
 			}
 			
 			&:active {
 				background: var(--light-2);
+				color: var(--primary-2);
+				border-color: var(--light-2);
 			}
 		}
 	}

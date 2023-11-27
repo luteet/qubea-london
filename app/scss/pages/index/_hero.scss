@@ -177,6 +177,7 @@
 
 	&__button {
 		width: 100%;
+		
 		@include _992 {
 			width: auto;
 		}
@@ -190,11 +191,27 @@
 		flex-direction: column;
 		gap: 10px;
 
+		font-size: 1.25rem;
+		color: var(--light-2);
+
+		@include _426 {
+			font-size: 1.5rem;
+		}
+
 		@include _992 {
 			flex-direction: row;
 		}
 
-		color: var(--light-2);
+		@media (any-hover: hover) {
+			transition: color .2s ease;
+			&:hover {
+				color: var(--white);
+			}
+			
+			&:active {
+				color: var(--light);
+			}
+		}
 
 		svg {
 			flex: 0 0 32px;

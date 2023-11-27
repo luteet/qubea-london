@@ -59,7 +59,7 @@
 							</a>
 						</li>
 					</ul>
-					<a href="#" class="header__book btn visible-on-mob" aria-label="Book online">
+					<a href="#" class="header__book btn visible-on-mob is-min" aria-label="Book online">
 						<svg width="32" height="32" viewBox="0 0 32 32">
 							<use xlink:href="img/sprites.svg#calendar-check"></use>
 						</svg>
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 			</nav>
-			<a href="#" class="header__book btn is-transparent is-hidden-text-on-mob" aria-label="Book online">
+			<a href="#" class="header__book btn is-transparent is-hidden-text-on-mob is-min" aria-label="Book online">
 				<svg width="32" height="32" viewBox="0 0 32 32">
 					<use xlink:href="img/sprites.svg#calendar-check"></use>
 				</svg>
@@ -268,7 +268,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-1.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-1.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-1.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-1.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -288,7 +288,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-2.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-2.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-2.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-2.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -308,7 +308,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-3.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-3.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-3.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-3.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -328,7 +328,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-4.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-4.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-4.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-4.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -348,7 +348,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-5.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-5.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-5.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-5.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -368,7 +368,7 @@
 										<picture>
 											<source srcset="img/index/services/index-service-image-6.avif" type="image/avif">
 											<source srcset="img/index/services/index-service-image-6.webp" type="image/webp">
-											<img src="img/index/services/index-service-image-6.jpg" alt="" width="400" height="550" loading="lazy">
+											<img src="img/index/services/index-service-image-6.jpg" alt="" width="464" height="680" loading="lazy">
 										</picture>
 									</div>
 									<div class="services__card--content">
@@ -488,17 +488,26 @@
 			<section class="location" id="locations">
 				<div class="location__map">
 					<div class="location__map--wrapper">
-						<div class="location__map--main image-aspect-ratio">
-							<picture>
-								<source srcset="img/index/location/location-map.avif" type="image/avif">
-								<source srcset="img/index/location/location-map.webp" type="image/webp">
-								<img src="img/index/location/location-map.jpg" alt="" width="1920" height="894" loading="lazy">
-							</picture>
+						<div class="location__map--main">
+							<div class="location__map--main-item image-aspect-ratio visible-on-desktop">
+								<picture>
+									<source srcset="img/index/location/location-map.avif" type="image/avif">
+									<source srcset="img/index/location/location-map.webp" type="image/webp">
+									<img src="img/index/location/location-map.jpg" alt="" width="1920" height="894" loading="lazy">
+								</picture>
+							</div>
+							<div class="location__map--main-item image-aspect-ratio visible-on-mob">
+								<picture>
+									<source srcset="img/index/location/location-map-mob.avif" type="image/avif">
+									<source srcset="img/index/location/location-map-mob.webp" type="image/webp">
+									<img src="img/index/location/location-map-mob.jpg" alt="" width="1784" height="1341" loading="lazy">
+								</picture>
+							</div>
 						</div>
-						<a href="#chelsea" class="location__map--point" style="--x: 55%; --y: 12%;">
+						<a href="#chelsea" class="location__map--point" style="--x: 55%; --y: 12%; --mob-x: 58%; --mob-y: 7%;">
 							<img src="img/index/location/location-map-icon.svg" width="102" height="131" alt="">
 						</a>
-						<a href="#marylebone" class="location__map--point" style="--x: 25%; --y: 60%;">
+						<a href="#marylebone" class="location__map--point" style="--x: 25%; --y: 60%; --mob-x: 10%; --mob-y: 56%;">
 							<img src="img/index/location/location-map-icon.svg" width="102" height="131" alt="">
 						</a>
 					</div>
@@ -752,7 +761,7 @@
 							Here is <br> the place where beauty meets expertise, trends meet tradition, and relaxation meets rejuvenation
 						</div>
 						<div class="join-us__footer">
-							<a href="#" class="join-us__footer--book btn is-light-2">
+							<a href="#" class="join-us__footer--book btn is-light-2 is-min-2">
 								<svg width="32" height="32" viewBox="0 0 32 32">
 									<use xlink:href="img/sprites.svg#calendar-check"></use>
 								</svg>
@@ -850,7 +859,7 @@
 				</ul>
 			</nav>
 			<div class="footer__book">
-				<a href="#" class="footer__book--link btn is-transparent" aria-label="Book online">
+				<a href="#" class="footer__book--link btn is-transparent is-min" aria-label="Book online">
 					<svg width="32" height="32" viewBox="0 0 32 32">
 						<use xlink:href="img/sprites.svg#calendar-check"></use>
 					</svg>

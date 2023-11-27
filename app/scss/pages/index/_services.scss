@@ -97,14 +97,34 @@
 
 		&--body {
 			display: grid;
+			
 			> * {
 				grid-area: 1/1;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&--body:hover &--link {
+				color: var(--black);
+			}
+
+
+			&--body:hover &--link svg {
+				transform: translate(10px,0);
+			}
+
+			&--body:active &--link svg {
+				transform: translate(7px,0);
 			}
 		}
 
 		// .services__card--background
 
 		&--background {
+			padding-top: 138%;
+			@include _992 {
+				padding-top: var(--padding-aspect-ratio);
+			}
 			img {
 				border-radius: 8px;
 			}
@@ -127,7 +147,7 @@
 			line-height: 100%;
 			font-size: 2rem;
 
-			@media (min-width: #{$containerMin}px) {
+			@include _426 {
 				font-size: 2.5rem;
 			}
 
@@ -151,14 +171,17 @@
 			line-height: 120%;
 			font-size: 1.25rem;
 
-			@media (min-width: #{$containerMin}px) {
+			@include _426 {
 				font-size: 1.5rem;
 			}
 
 			gap: 10px;
 
+			transition: color .3s ease;
+
 			svg {
 				flex: 0 0 32px;
+				transition: transform .3s ease;
 			}
 		}
 	}

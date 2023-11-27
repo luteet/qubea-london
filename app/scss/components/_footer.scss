@@ -93,7 +93,7 @@
 	&__nav {
 
 		width: 100%;
-		padding-top: 16px;
+		padding-top: 26px;
 
 		@include _768 {
 			width: auto;
@@ -123,6 +123,10 @@
 			}
 
 			@include _992 {
+				padding-right: 10px;
+			}
+
+			@include _container {
 				padding-right: 38px;
 			}
 		}
@@ -141,6 +145,7 @@
 
 			@include _992 {
 				font-size: 1rem;
+				padding: 12px 20px;
 			}
 
 			@include _container {
@@ -186,6 +191,12 @@
 
 		margin-top: 16px;
 
+		width: 100%;
+
+		@include _768 {
+			width: auto;
+		}
+
 		@include _992 {
 			margin-top: 0;
 		}
@@ -193,6 +204,10 @@
 		// .footer__book--link
 
 		&--link {
+			width: 100%;
+			@include _768 {
+				width: auto;
+			}
 		}
 	}
 }

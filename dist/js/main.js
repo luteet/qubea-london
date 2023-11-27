@@ -75,6 +75,10 @@ body.addEventListener('click', function (event) {
 			locationModal.classList.remove('is-active')
 		});
 
+		document.querySelectorAll('.location__map--point.is-active').forEach(locationTarget => {
+			locationTarget.classList.remove('is-active')
+		});
+
 		/* modal.style.setProperty('--x', locationmapPoint.offsetWidth + 20 + locationmapPoint.getBoundingClientRect().left + 'px');
 		if(getCoords(locationmapPoint).top - getCoords(locationmapPoint.closest('section')).top > 300) {
 			modal.style.setProperty('--y', locationmapPoint.getBoundingClientRect().top - modal.offsetHeight / 2 + 'px');
@@ -83,6 +87,7 @@ body.addEventListener('click', function (event) {
 		} */
 
 		setTimeout(() => {
+			locationmapPoint.classList.add('is-active')
 			modal.classList.add('is-active');
 		},0)
 		
@@ -92,6 +97,10 @@ body.addEventListener('click', function (event) {
 		document.querySelectorAll('.location-modal.is-active').forEach(modal => {
 			modal.classList.remove('is-active')
 		})
+
+		document.querySelectorAll('.location__map--point.is-active').forEach(locationTarget => {
+			locationTarget.classList.remove('is-active')
+		});
 	}
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </location> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -269,7 +278,7 @@ document.querySelectorAll('.services__slider').forEach(sliderElement => {
 		rewind: true,
 		speed: 700,
 		easing: "ease-in-out",
-		gap: 48,
+		gap: 47,
 		perMove: 1,
 
 		pagination: false,

@@ -19,7 +19,7 @@
 	// .advantages__title
 
 	&__title {
-		max-width: 620px;
+		max-width: 650px;
 	}
 
 	// .advantages__text
@@ -33,12 +33,13 @@
 		max-width: 747px;
 
 		color: #211C17;
+		font-weight: 500;
+		line-height: 160%;
+
 		font-size: 1rem;
 		@include _426 {
 			font-size: 1.25rem;
 		}
-		font-weight: 500;
-		line-height: 160%;
 	}
 
 	// .advantages__inner
@@ -155,9 +156,9 @@
 				}
 			}
 			p {
-				opacity: .6;
+				
 				font-weight: 500;
-				color: #211C17;
+				color: rgba(33,28,23,0.6);
 				font-size: 0.875rem;
 				line-height: 170%;
 
